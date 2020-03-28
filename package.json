@@ -1,24 +1,17 @@
 {
-  "name": "Project3",
+  "name": "project3",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "meteor run",
-    "test": "meteor test --once --driver-package meteortesting:mocha",
-    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "@babel/runtime": "^7.8.3",
-    "jquery": "^3.4.1",
-    "meteor-node-stubs": "^1.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "meteor": {
-    "mainModule": {
-      "client": "client/main.js",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.2"
   }
 }
