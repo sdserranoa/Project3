@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import './ofertas.html';
-import { getAllOfertas } from '../../../mongodb/mongodblib.js';
+//import { getAllOfertas } from '../../../mongodb/mongodblib.js';
 
 Template.ofertas.helpers({
   ofertas: [
