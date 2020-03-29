@@ -23,6 +23,22 @@ const getAllUsers = function (db, callback) {
     });
 }
 
+const getAllOfertas = function (db, callback) {
+    const collection = db.collection('ofertas');
+    collection.find({}).toArray(function (err, docs) {
+        assert.equal(err, null);
+        callback(docs);
+    });
+}
+
+const getAllRestaurantes = function (db, callback) {
+    const collection = db.collection('restaurantes');
+    collection.find({}).toArray(function (err, docs) {
+        assert.equal(err, null);
+        callback(docs);
+    });
+}
+
 const getUserById = function (idU, db, callback) {
 
     const collection = db.collection('users');
@@ -70,6 +86,11 @@ exports.createUser=createUser;
 exports.deleteUser=deleteUser;
 exports.updateUser=updateUser;
 exports.getUserByUsername=getUserByUsername;
+exports.getAllOfertas=getAllOfertas;
+exports.getAllRestaurantes=getAllRestaurantes;
+
+
+
 
 
 
