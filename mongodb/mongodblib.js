@@ -31,6 +31,14 @@ const getUserById = function (idU, db, callback) {
         callback(user);
     });
 }
+const getUserByUsername = function (username, db, callback) {
+
+    const collection = db.collection('users');
+    collection.findOne({ "username": username },function(err,user){
+        assert.equal(err, null);
+        callback(user);
+    });
+}
 const createUser = function (user, db, callback) {
     const collection = db.collection('users');
     collection.insertOne(user).then(callback(user));
@@ -61,6 +69,7 @@ exports.getUserById=getUserById;
 exports.createUser=createUser;
 exports.deleteUser=deleteUser;
 exports.updateUser=updateUser;
+exports.getUserByUsername=getUserByUsername;
 
 
 
