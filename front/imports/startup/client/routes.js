@@ -6,20 +6,18 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import '../../ui/layouts/app-body.js';
 import '../../ui/layouts/Test.html';
 import '../../ui/layouts/HomeLayout.html';
-
+import '../../ui/ofertas.js';
 
 FlowRouter.route('/', {
     action: function() {
-      console.log('entra a la ruta / y va a renderizar');
       BlazeLayout.render('App_body', { main: 'HomeLayout' });
-      console.log('entra a la ruta / y va a renderizar 2');
     }
   });
   
-  FlowRouter.route('/test', {
+  FlowRouter.route('/ofertas', {
     action: function() {
 
-      BlazeLayout.render('test', { main: 'Test' });
+      BlazeLayout.render('App_body', { main: 'ofertas' });
     }
   });
   
