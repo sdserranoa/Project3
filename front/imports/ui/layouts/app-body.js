@@ -33,3 +33,4 @@ Meteor.startup(() => {
     showConnectionIssue.set(true);
   }, CONNECTION_ISSUE_TIMEOUT);
 });
+
