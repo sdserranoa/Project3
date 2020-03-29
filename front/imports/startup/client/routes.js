@@ -16,7 +16,6 @@ FlowRouter.route('/', {
   
   FlowRouter.route('/ofertas', {
     action: function() {
-
       BlazeLayout.render('App_body', { main: 'ofertas' });
     }
   });
