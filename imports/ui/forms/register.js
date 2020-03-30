@@ -8,13 +8,14 @@ Template.register.events({
         var passwordVar = event.target.registerPassword.value;
         var ageVar = event.target.registerAge.value;
         console.log("Form submitted.");
-        var user={
+        Accounts.createUser({
             email: emailVar,
             password: passwordVar,
-            name: nameVar,
-            username: usernameVar,
-            age: ageVar
-        }
-        Users.insert(user);
+            profile:{
+                name: nameVar,
+                username: usernameVar,
+                age: ageVar
+            }
+        });
     }
 });
