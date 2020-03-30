@@ -1,10 +1,32 @@
 <template name="register">
-    <form>
-        <input type="name" name="registerName">
-        <input type="username" name="registerUsername">
-        <input type="email" name="registerEmail">
-        <input type="password" name="registerPassword">
-        <input type="age" name="registerAge">
-        <input type="submit" value="Register">
+    <form style="text-align:center">
+        <div class="card" style="width: 20%;">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+
+        <input type="name" placeholder="Nombre" name="registerName">
+    </li>
+        
+        <li class="list-group-item">
+        
+        <input type="username" placeholder="Nombre de usuario" name="registerUsername">
+    </li>
+    <li class="list-group-item">
+        
+        <input type="email" placeholder="Email" name="registerEmail">
+    </li>
+    <li class="list-group-item">
+        
+        <input type="password" placeholder="Contraseña" name="registerPassword">
+    </li>
+       <li class="list-group-item">
+      
+        <input type="age" placeholder="Edad" name="registerAge">
+        </li>
+        <input type="submit" value="Register" >
+    </ul>
+        </div>
+    </div>
     </form>
 </template>

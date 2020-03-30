@@ -32,11 +32,11 @@
       <ul class="navbar-nav">
        
           {{#if currentUser}}
+          {{> loginButtons}}
         <p>You're logged in.</p>
+       
     {{else}}
-    <li class="nav-item">
-    <a class="nav-link ml-5 mr-2" href="#">Login</a>
-  </li>
+    {{> loginButtons}}
   <li class="nav-item">
     <a class="nav-link" id="signup" href="/register">Sign up</a>
   </li>

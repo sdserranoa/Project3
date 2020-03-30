@@ -1,6 +1,9 @@
-import Users from "../collections";
-Template.register.events({
-    'submit form': function(event) {
+
+import './register.html';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+ Template.register.events({
+    'submit form': (event) =>{ 
         event.preventDefault();
         var nameVar = event.target.registerName.value;
         var usernameVar = event.target.registerUsername.value;
@@ -17,5 +20,7 @@ Template.register.events({
                 age: ageVar
             }
         });
-    }
+        
+        FlowRouter.redirect("/");
+    } 
 });

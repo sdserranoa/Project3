@@ -1,4 +1,4 @@
-import { Template } from 'meteor/templating';
+
 import './ofertas.html';
 import { Ofertas } from '../../api/ofertas.js';
 
