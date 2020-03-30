@@ -15,7 +15,7 @@ import { $ } from 'meteor/jquery';
 
 //import '../components/loading.js';
 import './app-body.html';
-
+import '../forms/register.html';
 const CONNECTION_ISSUE_TIMEOUT = 5000;
 
 // A store which is local to this file?
@@ -33,4 +33,11 @@ Meteor.startup(() => {
     showConnectionIssue.set(true);
   }, CONNECTION_ISSUE_TIMEOUT);
 });
+FlowRouter.route('/register', {
+  name: 'Register.show',
+  action() {
+    BlazeLayout.render('register', {main: 'Lists_show_page'});
+  }
+});
+
 

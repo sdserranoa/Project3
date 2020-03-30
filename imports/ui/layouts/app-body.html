@@ -30,12 +30,18 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link ml-5 mr-2" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="signup" href="#">Sign up</a>
-        </li>
+       
+          {{#if currentUser}}
+        <p>You're logged in.</p>
+    {{else}}
+    <li class="nav-item">
+    <a class="nav-link ml-5 mr-2" href="#">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="signup" href="/register">Sign up</a>
+  </li>
+    {{/if}}
+        
       </ul>
     </div>
   </nav>
