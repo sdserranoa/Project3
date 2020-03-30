@@ -6,7 +6,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import '../../ui/layouts/app-body.js';
 import '../../ui/layouts/Test.html';
 import '../../ui/layouts/HomeLayout.html';
-import '../../ui/ofertas.js';
+import '../../ui/ofertas/ofertas.js';
 
 FlowRouter.route('/', {
     action: function() {
