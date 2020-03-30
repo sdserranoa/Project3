@@ -1,0 +1,28 @@
+#signup {
+    color: #F27405;
+    border-color: #F27405;
+    border-style: solid;
+    border-width: 0.1px;
+    border-radius: 3px;
+}
+
+#signup:hover {
+    background-color: #F27405;
+    color: white;
+    transition-duration: 300ms;
+}
+
+#navbar-search {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: black;
+}
+
+#navbar-search:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition-duration: 300ms;
+}
+
+#navbar-search::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
