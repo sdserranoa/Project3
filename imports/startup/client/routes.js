@@ -7,7 +7,12 @@ import '../../ui/layouts/app-body.js';
 import '../../ui/layouts/Test.html';
 import '../../ui/layouts/HomeLayout.html';
 import '../../ui/ofertas/ofertas.js';
+
+// Import to override accounts templates
+//import '../../ui/accounts/accounts-templates.js';
+
 import '../../ui/forms/register.js';
+
 
 FlowRouter.route('/', {
     action: function() {

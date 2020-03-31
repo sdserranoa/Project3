@@ -26,3 +26,8 @@
 #navbar-search::placeholder {
     color: rgba(0, 0, 0, 0.7);
 }
+
+#login-dropdown-list {
+    left: -195px !important;
+    margin-top: 30px;
+}
