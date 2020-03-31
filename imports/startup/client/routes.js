@@ -8,7 +8,7 @@ import '../../ui/layouts/Test.html';
 import '../../ui/layouts/HomeLayout.html';
 import '../../ui/ofertas/ofertas.js';
 import '../../ui/forms/register.js';
-
+import '../../ui/forms/edit.js';
 FlowRouter.route('/', {
     action: function() {
       BlazeLayout.render('App_body', { main: 'HomeLayout' });
@@ -30,5 +30,11 @@ FlowRouter.route('/', {
     name: 'Register.show',
     action() {
       BlazeLayout.render('App_body', {main: 'register'});
+    }
+  });
+  FlowRouter.route('/perfil', {
+    name: 'Perfil.show',
+    action() {
+      BlazeLayout.render('App_body', {main: 'perfil'});
     }
   });
