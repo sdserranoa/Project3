@@ -9,19 +9,25 @@ import '../../ui/layouts/HomeLayout.html';
 import '../../ui/ofertas.js';
 
 FlowRouter.route('/', {
-    action: function() {
-      BlazeLayout.render('App_body', { main: 'HomeLayout' });
-    }
-  });
-  
-  FlowRouter.route('/ofertas', {
-    action: function() {
-      BlazeLayout.render('App_body', { main: 'ofertas' });
-    }
-  });
-  
-  FlowRouter.route('/home', {
-    action: function() {
-      BlazeLayout.render('layout', { main: 'HomeLayout' });
-    }
-  });
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'HomeLayout' });
+  }
+});
+
+FlowRouter.route('/ofertas', {
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'ofertas' });
+  }
+});
+
+FlowRouter.route('/menus', {
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'menus' });
+  }
+});
+
+FlowRouter.route('/home', {
+  action: function () {
+    BlazeLayout.render('layout', { main: 'HomeLayout' });
+  }
+});
