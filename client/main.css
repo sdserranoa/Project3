@@ -28,9 +28,8 @@
 }
 
 .menu-card {
-    background-color: #730202;
     border: none;
-    background-image: url("images/card-background.png");
+    background-image: url('/images/card-background.png');
     background-repeat: repeat;
 }
 
