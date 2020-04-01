@@ -1,3 +1,33 @@
 <template name="menu">
-    
+    {{#each menusCollection}}
+    <div class="container-fluid">
+        <div class="card menu-card shadow my-2" style="background-image: url('./images/card-background.png');">
+            <div class="card-body">
+                <h2 class="card-title menu-text menu-title text-center">
+                    Menú</h2>
+                <hr style="width: 25%; background-color: white;">
+
+                {{#each categories}}
+                <h3 class="card-title menu-text menu-category"><strong>{{name}}</strong></h3>
+                <table class="table table-borderless">
+                    <tbody>
+                        {{#each dishes}}
+                        <tr>
+                            <td>
+                                <p class="menu-text"><strong>{{name}}</strong></p>
+                                <p class="menu-text">{{description}}</p>
+                            </td>
+                            <td>
+                                <p class="menu-text"><strong>{{formatPrice price}}</strong></p>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <hr class="menu-divider">
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
 </template>
