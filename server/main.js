@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/api/ofertas.js';
+import Menus from '../imports/api/menus';
 
 Meteor.startup(() => {
   // code to run on server at startup
@@ -17,17 +18,17 @@ Meteor.startup(() => {
               {
                 "name": "Entrada 1",
                 "description": "Descripcion de la entrada 1",
-                "precio": 12000
+                "price": 12000
               },
               {
                 "name": "Entrada 2",
                 "description": "Descripcion de la entrada 2",
-                "precio": 15000
+                "price": 15000
               },
               {
                 "name": "Entrada 3",
                 "description": "Descripcion de la entrada 3",
-                "precio": 13000
+                "price": 13000
               }
             ]
           },
@@ -37,17 +38,17 @@ Meteor.startup(() => {
               {
                 "name": "Pasta 1",
                 "description": "Descripcion de la pasta 1",
-                "precio": 22000
+                "price": 22000
               },
               {
                 "name": "Pasta 2",
                 "description": "Descripcion de la pasta 2",
-                "precio": 25000
+                "price": 25000
               },
               {
                 "name": "Pasta 3",
                 "description": "Descripcion de la pasta 3",
-                "precio": 30000
+                "price": 30000
               }
             ]
           },
@@ -57,12 +58,12 @@ Meteor.startup(() => {
               {
                 "name": "Postre 1",
                 "description": "Descripcion del postre 1",
-                "precio": 8000
+                "price": 8000
               },
               {
                 "name": "Postre 2",
                 "description": "Descripcion del postre 2",
-                "precio": 10000
+                "price": 10000
               }
             ]
           }

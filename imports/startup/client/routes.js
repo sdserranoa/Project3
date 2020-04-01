@@ -8,6 +8,7 @@ import '../../ui/layouts/Test.html';
 import '../../ui/layouts/HomeLayout.html';
 import '../../ui/ofertas/ofertas.js';
 import '../../ui/forms/register.js';
+import '../../ui/menus/menus';
 
 FlowRouter.route('/', {
   action: function () {
@@ -26,6 +27,12 @@ FlowRouter.route('/ofertas', {
     BlazeLayout.render('App_body', { main: 'ofertas' });
   }
 });
+
+FlowRouter.route('/menus', {
+  action: function() {
+    BlazeLayout.render('App_body', { main: 'menu' })
+  }
+})
 
 FlowRouter.route('/register', {
   name: 'Register.show',
