@@ -6,7 +6,7 @@ URL para ver el live demode la aplicación:
 
 Instrucciones para correr el proyecto:
 (Solo desarrollo)
-1) npm i dentro del proyecto
+1) después de clonado el repositorio, npm i dentro del proyecto
 2) meteor dentro del proyecto
 3) en consolas diferentes realizar meteor en la carpeta anterior
 4) App en el puerto 3000
