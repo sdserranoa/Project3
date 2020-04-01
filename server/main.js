@@ -5,9 +5,13 @@ import Menus from '../imports/api/menus';
 Meteor.startup(() => {
   Meteor.users.allow({
     update: function (userId, doc) {
-      console.log('UPDATE USER');
-      return true;
+        console.log('UPDATE USER');
+        return true; 
+    },
+    remove: function (userId, doc) {
+      console.log('DELETE USER');
+      return true; 
     }
-  });
+});
   // code to run on server at startup
 });

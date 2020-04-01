@@ -38,5 +38,9 @@ Template.perfil.events({
     } ,
     'reset form': (event) =>{ 
         FlowRouter.redirect("/");
+    },
+    'click button': (event) =>{ 
+        Meteor.users.remove(Meteor.user()._id);
+        FlowRouter.redirect("/");
     }
 });
