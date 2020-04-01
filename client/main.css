@@ -27,6 +27,11 @@
     color: rgba(0, 0, 0, 0.7);
 }
 
+#login-dropdown-list {
+    left: -195px !important;
+    margin-top: 30px;
+}
+
 .menu-card {
     border: none;
     background-image: url('/images/card-background.png');
