@@ -7,7 +7,11 @@ Meteor.startup(() => {
     update: function (userId, doc) {
         console.log('UPDATE USER');
         return true; 
-    }
+    },
+    remove: function (userId, doc) {
+      console.log('DELETE USER');
+      return true; 
+  }
 });
   // code to run on server at startup
 
