@@ -16,37 +16,37 @@ import '../../ui/menus/menus';
 import '../../ui/forms/register.js';
 import '../../ui/forms/edit.js';
 FlowRouter.route('/', {
-    action: function() {
-      BlazeLayout.render('App_body', { main: 'HomeLayout' });
-    }
-  });
-  
-  FlowRouter.route('/ofertas', {
-    action: function() {
-      BlazeLayout.render('App_body', { main: 'ofertas' });
-    }
-  });
-  
-  FlowRouter.route('/home', {
-    action: function() {
-      BlazeLayout.render('layout', { main: 'HomeLayout' });
-    }
-  });
-  FlowRouter.route('/register', {
-    name: 'Register.show',
-    action() {
-      BlazeLayout.render('App_body', {main: 'register'});
-    }
-  });
-  FlowRouter.route('/perfil', {
-    name: 'Perfil.show',
-    action() {
-      BlazeLayout.render('App_body', {main: 'perfil'});
-    }
-  });
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'HomeLayout' });
+  }
+});
+
+FlowRouter.route('/ofertas', {
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'ofertas' });
+  }
+});
+
+FlowRouter.route('/home', {
+  action: function () {
+    BlazeLayout.render('layout', { main: 'HomeLayout' });
+  }
+});
+FlowRouter.route('/register', {
+  name: 'Register.show',
+  action() {
+    BlazeLayout.render('App_body', { main: 'register' });
+  }
+});
+FlowRouter.route('/perfil', {
+  name: 'Perfil.show',
+  action() {
+    BlazeLayout.render('App_body', { main: 'perfil' });
+  }
+});
 
 FlowRouter.route('/menus', {
-  action: function() {
+  action: function () {
     BlazeLayout.render('App_body', { main: 'menu' })
   }
 });
