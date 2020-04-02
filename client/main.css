@@ -56,6 +56,8 @@
     border-top: 1px dashed white;
 }
 
+/* Carousel */
+
 .header-text {
     position: absolute;
     top: 20%;
@@ -65,14 +67,14 @@
     color: #fff;
 }
 
-.header-text h2 {
-    font-size: 40px;
-}
-
 .header-text h2 span {
-    background-color: #2980b9;
 	padding: 10px;
 }
+
+.header-text h3 span {
+	padding: 15px;
+}
+
 /* ----------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------- */
 /* CSS Form */
