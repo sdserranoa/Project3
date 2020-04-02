@@ -9,6 +9,7 @@ import '../../ui/layouts/HomeLayout.html';
 import '../../ui/ofertas/ofertas.js';
 import '../../ui/forms/register.js';
 import '../../ui/menus/menus';
+import '../../ui/restaurants/restaurants.js';
 
 // Import to override accounts templates
 //import '../../ui/accounts/accounts-templates.js';
@@ -43,5 +44,11 @@ FlowRouter.route('/perfil', {
 FlowRouter.route('/menus', {
   action: function () {
     BlazeLayout.render('App_body', { main: 'menu' })
+  }
+});
+
+FlowRouter.route('/restaurants', {
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'restaurants' })
   }
 });
