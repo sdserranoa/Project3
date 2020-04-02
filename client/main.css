@@ -56,12 +56,30 @@
     border-top: 1px dashed white;
 }
 
+/* Carousel */
+
+.header-text {
+    position: absolute;
+    top: 20%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+
+.header-text h2 span {
+	padding: 10px;
+}
+
+.header-text h3 span {
+    padding: 15px;
+}
+
 #restaurants h1{
     font-weight: bold;
     font-size: 50px;
     text-align: center;
     color: #730202;
-
 }
 #ofertas h1{
     font-weight: bold;

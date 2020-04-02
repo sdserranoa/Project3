@@ -1,11 +1,13 @@
 import './menus.html';
 import Menus from '../../api/menus';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.menu.helpers({
-    menusCollection: function () {
-        let menus = Menus.find({});
-        console.log(menus);
-        return Menus.find({});
+    menu: function () {
+        let restaurantID = FlowRouter.getParam(id);
+        let menu = Menus.find({ idRestaurant: restaurantID });
+        console.log(menu);
+        return menu;
     },
 
     formatPrice: function (price) {
@@ -27,5 +29,10 @@ Template.menu.helpers({
 
         console.log(formattedPrice);
         return formattedPrice;
+    },
+
+    hasMenu: function () {
+        let restaurantID = FlowRouter.getParam(id);
+        return Menus.find({ idRestaurant: restaurantID }) === undefined;
     }
 });
