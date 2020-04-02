@@ -66,7 +66,7 @@ Template.oferta.events({
   'click .delete': function() {
     Ofertas.remove(this._id);
   },
-  
+
 });
 Template.oferta.helpers({
   check_admin (e) { return e == 'admin' },
