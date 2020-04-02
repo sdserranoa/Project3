@@ -10,6 +10,7 @@
         <header>
             <h1>Restaurantes</h1>
         </header>
+        {{> filters}}
         <div class="card-container">
             {{#each restaurants}}
             {{> restaurant}}
@@ -58,7 +59,6 @@
 <template name="form">
     <form class="form">
         <h2>Crear un nuevo restaurante:</h2>
-
         <div class="label-input-container">
             <label for="name">Nombre del restaurante:</label><br>
             <input
@@ -105,6 +105,7 @@
                 <option value="Bogotana">Bogotana</option>
                 <option value="Española">Española</option>
                 <option value="Peruana">Peruana</option>
+                <option value="Mexicana">Mexicana</option>
                 <option value="Arabe">Arabe</option>
                 <option value="Mediterranea">Mediterranea</option>
             </select>
@@ -136,3 +137,63 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </template>
+
+
+<template name="filters">
+    <div class="filters">
+        <h2>Filtrar Restaurantes:</h2>
+        <div class="filter-container">
+            <input
+                type="checkbox"
+                id="filterByKidsAllowed"
+                name="filterByKidsAllowed"
+            />
+            <label>Filtrar por admición de niños:</label>
+            <input
+                type="checkbox"
+                id="wantsKidsAllowed"
+                name="wantsKidsAllowed"
+                checked='true'
+            />
+            <h5>Niños admitidos</h5>
+        </div>
+        <hr/>
+        <div class="filter-container">
+            <input
+                type="checkbox"
+                id="filterByCookingType"
+                name="filterByCookingType"
+            />
+            <label>Filtrar por comida:</label>
+            <select id='cookingTypeFilter' name="cookingTypeFilter">
+                <option value="Rapida">Rapida</option>
+                <option value="Italiana">Italiana</option>
+                <option value="Paisa">Paisa</option>
+                <option value="Bogotana">Bogotana</option>
+                <option value="Española">Española</option>
+                <option value="Peruana">Peruana</option>
+                <option value="Mexicana">Mexicana</option>
+                <option value="Arabe">Arabe</option>
+                <option value="Mediterranea">Mediterranea</option>
+            </select>
+        </div>
+        <hr/>
+        <div class="filter-container">
+            <input
+                type="checkbox"
+                id="filterByEnvironment"
+                name="filterByEnvironment"
+            />
+            <label>Filtrar por ambiente:</label>
+            <select id='environmentFilter' name="environmentFilter">
+                <option value="Familiar">Familiar</option>
+                <option value="Bar">Bar</option>
+                <option value="Informal">Informal</option>
+                <option value="Romántico">Romántico</option>
+                <option value="Campestre">Campestre</option>
+            </select>
+        </div>
+    </div>
+</template>
+
+

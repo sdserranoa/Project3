@@ -2,8 +2,7 @@ import { Meteor } from 'meteor/meteor';
 //import '../imports/api/ofertas.js';
 import Menus from '../imports/api/menus';
 import {Ofertas}  from '../imports/api/ofertas';
-
-import '../imports/api/restaurants.js';
+import {Restaurants}  from '../imports/api/restaurants';
 
 Meteor.startup(() => {
   Meteor.users.allow({
@@ -129,3 +128,44 @@ if (Ofertas.find({}).count() <= 3) {
   })
 }
 });
+
+if (Restaurants.find().count() <= 3) {
+  const restaurants = [
+    {
+      name:'Crepes',
+      adress:'Calle 80a #5-55',
+      phoneNumber:'+57 3002528569',
+      environment:'Familiar',
+      cookingType:'Mediterranea',
+      kidsAllowed: true,
+      description: "Restaurante colombiano, tiene crepes con todos los tipos de relleno, genial para cualquier tipo de celebracion a muy buen precio.",
+      owner:-1,
+      username:'auto-generated',
+    },
+    {
+      name:'Varietale',
+      adress:'Calle 8 #5-4',
+      phoneNumber:'+57 3015258569',
+      environment:'Informal',
+      cookingType:'Bogotana',
+      kidsAllowed: true,
+      description: "Un cafe, tenemos las mejores onces de toda la ciudad, con las bebidas de más alta calidad",
+      owner:-1,
+      username:'auto-generated',
+    },
+    {
+      name:'Techo Mexicano',
+      adress:'Calle 85 #15-87',
+      phoneNumber:'+57 3045230569',
+      environment:'Bar',
+      cookingType:'Mexicana',
+      kidsAllowed: false,
+      description: "Los mejores tacos de la zona junto al mejor bar mexicano, con musica en vivo todas las noches.",
+      owner:-1,
+      username:'auto-generated',
+    }
+  ];
+  restaurants.forEach(e => {
+    Restaurants.insert(e);
+  })
+};
