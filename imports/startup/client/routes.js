@@ -10,6 +10,7 @@ import '../../ui/ofertas/ofertas.js';
 import '../../ui/forms/register.js';
 import '../../ui/menus/menus';
 import '../../ui/restaurants/restaurants.js';
+import '../../ui/calificaciones/calificacion.js';
 
 // Import to override accounts templates
 //import '../../ui/accounts/accounts-templates.js';
@@ -50,5 +51,11 @@ FlowRouter.route('/menus', {
 FlowRouter.route('/restaurants', {
   action: function () {
     BlazeLayout.render('App_body', { main: 'restaurants' })
+  }
+});
+
+FlowRouter.route('/calificaciones', {
+  action: function () {
+    BlazeLayout.render('App_body', { main: 'calificaciones' })
   }
 });
