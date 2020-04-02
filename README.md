@@ -13,6 +13,9 @@ Instrucciones para correr el proyecto:
 4) no se necesita correr un comando ni refrescar la pagina con cada cambio al front
 5) una vez realizado el comando meteor entrar a localhost:3000/ para ver el inicio de la pag. 
 
+Información extra:
+No utilizamos Express para el back porque desde Meteor se puede administrar con facilidad colecciones de MongoDB. Por este motivo no tenemos pruebas de Postman que evidencien el funcionamiento de los los endpoints del back.
+
 
 URL de un video en el que se demuestre la funcionalidad la aplicación:
 -

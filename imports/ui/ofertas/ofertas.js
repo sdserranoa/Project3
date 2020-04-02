@@ -36,7 +36,9 @@ Template.formato.events({
     const title1 = target.title.value;
     const description1 = target.description.value;
     const restaurant1 = target.restaurant.value;
-    //const url1 = target.url.value;
+    let url3=" "+target.url.value;
+    const url2 = url3.slice(url3.lastIndexOf("\\")+1,url3.length);
+    const url1 = "./images/"+url2;
     const hoyCompleto = new Date();
     //const hoySimple = hoyCompleto.getDay()+hoyCompleto.getMonth() + hoyCompleto.getFullYear();
     const futuroCompleto = new Date(Date.now() + (7 * 24 * 60 * 60 * 1000));
@@ -50,12 +52,14 @@ Template.formato.events({
       finalDate: futuroCompleto,
       owner: Meteor.userId(),
       username: Meteor.user().username,
-      //url: url1,
+      url: url1
+
     });
     // Clear form
     target.title.value = '';
     target.description.value = '';
     target.restaurant.value = '';
+    target.url.value = '';
   },
 });
 Template.oferta.events({
