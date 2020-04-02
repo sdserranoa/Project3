@@ -1,0 +1,68 @@
+<template name="HomeLayout">
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+            <li data-target="#homeCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" style="width: 100%; height: 500px !important;">
+            <div class="carousel-item active">
+                <img src="images/restaurant-1.png" class="d-block w-100" alt="Welcome">
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center">
+                        <h2 class="display-1"><span>Bienvenido a Carrota</span></h2>
+                        <h3 class="display-4"><span>La aplicación que agiliza la búsqueda de tus planes para ir a
+                                comer</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="#today-recommendations">
+                    <img src="images/restaurant-2.png" class="d-block w-100" alt="Today's recomendation">
+                    <div class="header-text hidden-xs">
+                        <div class="col-md-12 text-center">
+                            <h2 class="display-1"><span>Recomendaciones para hoy</span></h2>
+                            <h3 class="display-4"><span>Revisa nuestra sección de recomendaciones. ¡Todos los días
+                                    ponemos nuevas opciones!</span></h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="#event-recommendations">
+                    <img src="images/Easter.png" class="d-block w-100" alt="Today's recomendation">
+                    <div class="header-text hidden-xs">
+                        <div class="col-md-12 text-center">
+                            <h2 class="display-1"><span>¡Felices Pascuas!</span></h2>
+                            <h3 class="display-4"><span>Escoge entre diferentes restaurantes seleccionados para este
+                                    evento</span></h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="container-fluid mt-5">
+        {{#if currentUser}}
+        <h1>Recomendaciones para ti</h1>
+        <!-- Restaurantes recomendados para el usuario -->
+        <hr>
+        {{/if}}
+
+        <h1 id="today-recommendations">Recomendaciones para hoy</h1>
+        <!-- Restaurantes recomendados para hoy -->
+        <hr>
+
+        <h1 id="event-recommendations">Restaurantes para estas pascuas</h1>
+        <!-- Restaurantes pascua -->
+        <hr>
+    </div>
+</template>
