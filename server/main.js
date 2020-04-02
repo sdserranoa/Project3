@@ -23,7 +23,6 @@ Meteor.startup(() => {
     console.log("There are no menus");
     let dummyMenus = [
       {
-        "id": 1,
         "categories": [
           {
             "name": "Entradas",

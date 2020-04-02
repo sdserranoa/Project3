@@ -41,7 +41,7 @@ FlowRouter.route('/perfil', {
   }
 });
 
-FlowRouter.route('/menus', {
+FlowRouter.route('/', {
   action: function () {
     BlazeLayout.render('App_body', { main: 'menu' })
   }
