@@ -1,11 +1,14 @@
 <template name="HomeLayout">
-    <header>
-        <h1>Carrota</h1>
-
-    </header>
-    <main>
-        <div class="billboard">
-            <h2>Choose your restaurants</h2>
+    <div class="container-fluid">
+        <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/card-background.png" class="d-block w-100" alt="Example">
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 </template>

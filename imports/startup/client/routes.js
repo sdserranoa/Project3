@@ -27,11 +27,6 @@ FlowRouter.route('/ofertas', {
   }
 });
 
-FlowRouter.route('/home', {
-  action: function () {
-    BlazeLayout.render('layout', { main: 'HomeLayout' });
-  }
-});
 FlowRouter.route('/register', {
   name: 'Register.show',
   action() {
