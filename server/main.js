@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/api/ofertas.js';
+//import '../imports/api/ofertas.js';
 import Menus from '../imports/api/menus';
+import {Ofertas}  from '../imports/api/ofertas';
 
 Meteor.startup(() => {
   Meteor.users.allow({
@@ -85,4 +86,45 @@ Meteor.startup(() => {
       Menus.insert(e);
     })
   }
+//Ofertas.remove({},console.log("todas las ofertas have been removed"));
+console.log(Ofertas.find({}).count() );
+if (Ofertas.find({}).count() <= 3) {
+  console.log("There are no ofertas");
+  const hoyCompleto = new Date();
+  const futuroCompleto = new Date(Date.now() + (7 * 24 * 60 * 60 * 1000));
+  let ofertasI = [
+    {
+      "title":"La mejor pormoción bajo el mar",
+      "description":"buy 1 Krabby patty get 1 free",
+      "restaurant":"The Krusty Crab",
+      "initialDate":hoyCompleto,
+      "finalDate":futuroCompleto,
+      "owner": "server",
+      "username": "server",
+      "url": "./images/KrabbyPatty.jpg"
+    },
+    {
+      "title":"La mejor pormoción bajo el mar en pareja",
+      "description":"buy 2 Krabby patty get 1 free",
+      "restaurant":"The Krusty Crab",
+      "initialDate":hoyCompleto,
+      "finalDate":futuroCompleto,
+      "owner": "server",
+      "username": "server",
+      "url": "./images/KrabbyPatty.jpg"
+    },{
+      "title":"La mejor pormoción bajo el mar para la familia",
+      "description":"buy 3 Krabby patty get 1 free",
+      "restaurant":"The Krusty Crab",
+      "initialDate":hoyCompleto,
+      "finalDate":futuroCompleto,
+      "owner": "server",
+      "username": "server",
+      "url": "./images/KrabbyPatty.jpg"
+    }
+  ];
+  ofertasI.forEach(e => {
+    Ofertas.insert(e);
+  })
+}
 });
