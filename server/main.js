@@ -3,15 +3,17 @@ import { Meteor } from 'meteor/meteor';
 import Menus from '../imports/api/menus';
 import {Ofertas}  from '../imports/api/ofertas';
 
+import '../imports/api/restaurants.js';
+
 Meteor.startup(() => {
   Meteor.users.allow({
     update: function (userId, doc) {
         console.log('UPDATE USER');
-        return true; 
+        return true;
     },
     remove: function (userId, doc) {
       console.log('DELETE USER');
-      return true; 
+      return true;
     }
 });
   // code to run on server at startup
