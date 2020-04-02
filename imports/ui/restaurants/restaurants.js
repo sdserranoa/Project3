@@ -24,7 +24,9 @@ Template.form.events({
     const cookingType = target.cookingType.value;
     const kidsAllowed = target.kidsAllowed.checked;
     const description = target.description.value;
-
+    let url=" "+target.url.value;
+    url = url.slice(url.lastIndexOf("\\")+1,url.length);
+    url = "./images/"+url;
 
     Restaurants.insert({
       name: name,
@@ -34,6 +36,7 @@ Template.form.events({
       cookingType: cookingType,
       kidsAllowed: kidsAllowed,
       description: description,
+      url: url,
       owner: Meteor.userId(),
       username: Meteor.user().username,
     });
@@ -42,8 +45,11 @@ Template.form.events({
     target.name.value = '';
     target.adress.value = '';
     target.phoneNumber.value = '';
+    target.kidsAllowed.checked = true;
+    target.environment.value = 'Familiar';
+    target.cookingType.value = 'Rapida';
     target.description.value = '';
-
+    target.url.value = '';
   },
 });
 Template.restaurant.events({
