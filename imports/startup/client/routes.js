@@ -42,7 +42,7 @@ FlowRouter.route('/perfil', {
   }
 });
 
-FlowRouter.route('/menus', {
+FlowRouter.route('/restaurants/:id/menu', {
   action: function () {
     BlazeLayout.render('App_body', { main: 'menu' })
   }
