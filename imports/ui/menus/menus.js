@@ -1,9 +1,11 @@
 import './menus.html';
 import Menus from '../../api/menus';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.menu.helpers({
-    menusCollection: function () {
-        let menus = Menus.find({});
+    menu: function () {
+        let restaurant = FlowRouter.getParam(id);
+        let menus = Menus.find({ idRestaurant: id });
         console.log(menus);
         return Menus.find({});
     },
