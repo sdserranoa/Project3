@@ -53,16 +53,16 @@
     <div class="container-fluid mt-5">
         {{#if currentUser}}
         <h1>Recomendaciones para ti</h1>
-        <!-- Restaurantes recomendados para el usuario -->
+        {{> restaurants}}
         <hr>
         {{/if}}
 
         <h1 id="today-recommendations">Recomendaciones para hoy</h1>
-        <!-- Restaurantes recomendados para hoy -->
+        
         <hr>
 
         <h1 id="event-recommendations">Restaurantes para estas pascuas</h1>
-        <!-- Restaurantes pascua -->
+        
         <hr>
     </div>
 </template>

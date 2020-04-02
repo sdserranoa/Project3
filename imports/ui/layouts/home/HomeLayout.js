@@ -1,15 +1,22 @@
 import './HomeLayout.html';
-import Restaurants from '../../../api/restaurants';
+import '../../restaurants/restaurants.js';
+import { Restaurants } from '../../../api/restaurants';
 
 let restaurants = [];
 
-Template.HomeLayout.onCreated(function() { 
-    /*restaurants = Restaurants.find({});
-    console.log(restaurants);*/
-});
+/*
+Template.HomeLayout.onCreated(function () {
+    restaurants = Restaurants.find({});
+    console.log("a var" + Restaurants.find({}));
 
-Template.HomeLayout.helpers({
-    restaurantCollection: function() {
-        
-    }
+    console.log(restaurants);
 });
+*/
+
+/*Template.HomeLayout.helpers({
+    restaurantCollection() {
+        var restaurants = Restaurants.find();
+        console.log(restaurants);
+        return restaurants;
+    }
+});*/
