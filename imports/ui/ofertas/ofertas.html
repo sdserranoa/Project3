@@ -1,15 +1,5 @@
 <template name="ofertas">
-    <div class="container">
-        <header>
-            <h1>Ofertas</h1>
-        </header>
-        <div class="container">
-            <div class="row">
-                {{#each ofertas}}
-                {{> oferta}}
-                {{/each}}
-            </div>
-        </div>
+    <div id="ofertas">
         {{ #if check_admin (currentUser.username) }}
         <div class="row">
             <div class="col text-center">
@@ -17,6 +7,16 @@
             </div>
         </div>
         {{/if}}
+        <header>
+            <h1>Ofertas</h1>
+        </header>
+        <div class="card-container">
+            <div class="row">
+                {{#each ofertas}}
+                {{> oferta}}
+                {{/each}}
+            </div>
+        </div>
     </div>
 </template>
 
@@ -36,10 +36,10 @@
                 {{/if}}
                 <div class="card-buttons">
                     <!--a href="/restaurantes" class="btn btn-primary">Ir al estaurante</a-->
-                    <button class="btn btn-primary" onclick="location.href='http://localhost:3000/restaurants';" value="Go to Restaurants" >Restaurantes</button>
+                    <button class="btn btn-primary" onclick="location.href='http://localhost:3000/restaurants';" value="Go to Restaurants" >Ir a restaurantes</button>
                 <!--solo ADMIN-->
                 {{ #if check_admin (currentUser.username) }}
-                <button class="btn btn-primary delete">&times;</button>
+                <button class="btn btn-primary delete"><strong>&times;</strong></button>
                 {{/if}}
                 </div>  
             </div>
@@ -49,6 +49,7 @@
 
 <template name="formato">
     <form class="new-oferta form">
+        <h2>Crear una nueva oferta:</h2>
         <div class="label-input-container">
             <label for="title">Título de la oferta:</label><br>
             <input type="text" id="title" name="title" placeholder="Oferta del día de los enamorados...">

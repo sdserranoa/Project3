@@ -140,7 +140,7 @@
 
 
 <template name="filters">
-    <div class="filters">
+    <form class="filters">
         <h2>Filtrar Restaurantes:</h2>
         <div class="filter-container">
             <input
@@ -151,8 +151,8 @@
             <label>Filtrar por admición de niños:</label>
             <input
                 type="checkbox"
-                id="wantsKidsAllowed"
-                name="wantsKidsAllowed"
+                id="kidsAllowedFilter"
+                name="kidsAllowedFilter"
                 checked='true'
             />
             <h5>Niños admitidos</h5>
@@ -193,7 +193,11 @@
                 <option value="Campestre">Campestre</option>
             </select>
         </div>
-    </div>
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </div>
+
+    </form>
 </template>
 
 
