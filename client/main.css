@@ -56,6 +56,14 @@
     border-top: 1px dashed white;
 }
 
+#restaurants h1{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: #730202;
+
+}
+
 /* ----------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------- */
 /* CSS Form */
@@ -145,13 +153,23 @@
 /* ----------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------- */
 /* CSS Card */
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    max-width: 100%;
+    width: fit-content;
+    margin: auto;
+}
+
 .card{
     background-color: white;
     border: 1px solid gray;
     border-radius: 5px;
     box-shadow: 0 0 20px gray;
     width: 300px;
-    margin: 50px auto;
+    margin: 20px 30px;
     padding: 15px;
     font-size: 15px;
 }
