@@ -1,4 +1,5 @@
 <template name="menu">
+    {{#if hasMenu}}
     {{#each menu}}
     <div class="container-fluid">
         <div class="card menu-card shadow my-2" style="background-image: url('./images/card-background.png');">
@@ -30,8 +31,14 @@
         </div>
     </div>
     {{/each}}
+    {{else}}
+    <div class="container-fluid h-100 align-items-center" style="background-color: gainsboro;">
+        <h2 class="text-center display-4" style="color: gray;">Este restaurante no tiene menú</h2>
+        <h2 class="text-center display-4" style="color: gray;">:(</h2>
+    </div>
+    {{/if}}
 </template>
 
 <template name="addMenu">
-    
+    <button type="button" class="btn btn-primary"></button>
 </template>

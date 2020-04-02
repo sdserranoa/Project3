@@ -4,10 +4,10 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.menu.helpers({
     menu: function () {
-        let restaurant = FlowRouter.getParam(id);
-        let menus = Menus.find({ idRestaurant: id });
-        console.log(menus);
-        return Menus.find({});
+        let restaurantID = FlowRouter.getParam(id);
+        let menu = Menus.find({ idRestaurant: restaurantID });
+        console.log(menu);
+        return menu;
     },
 
     formatPrice: function (price) {
@@ -29,5 +29,10 @@ Template.menu.helpers({
 
         console.log(formattedPrice);
         return formattedPrice;
+    },
+
+    hasMenu: function () {
+        let restaurantID = FlowRouter.getParam(id);
+        return Menus.find({ idRestaurant: restaurantID }) === undefined;
     }
 });
