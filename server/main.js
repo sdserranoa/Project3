@@ -88,7 +88,7 @@ Meteor.startup(() => {
     })
   }
 //Ofertas.remove({},console.log("todas las ofertas have been removed"));
-console.log(Ofertas.find({}).count() );
+//console.log(Ofertas.find({}).count() );
 if (Ofertas.find({}).count() <= 3) {
   console.log("There are no ofertas");
   const hoyCompleto = new Date();
