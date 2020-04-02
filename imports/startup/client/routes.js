@@ -5,7 +5,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 //import '../../ui/layouts/app-body.js';
 import '../../ui/layouts/app-body.js';
 import '../../ui/layouts/Test.html';
-import '../../ui/layouts/HomeLayout.html';
+import '../../ui/layouts/home/HomeLayout';
 import '../../ui/ofertas/ofertas.js';
 import '../../ui/forms/register.js';
 import '../../ui/menus/menus';
