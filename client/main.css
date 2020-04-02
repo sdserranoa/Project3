@@ -182,7 +182,6 @@
 .card-container{
     display: flex;
     flex-wrap: wrap;
-    justify-items: flex-start;
     max-width: 100%;
     width: fit-content;
     margin: auto;
@@ -243,3 +242,59 @@
 /* CSS Card */
 /* ----------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* CSS FilterForm */
+.filters{
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 20px gray;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 15px;
+    font-size: 15px;
+
+}
+.filters h2{
+    text-align: center;
+    margin: 0 auto 20px;
+}
+.filter-container{
+    display: flex;
+}
+.filter-container label{
+    color: black;
+    margin-right: 20px;
+}
+
+.filter-container input{
+    border-radius: 3px;
+    color: var(--gray-dark-3);
+    margin: 0 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+
+}
+
+.filter-container  select{
+    height: 30px;
+    width: 100%;
+    max-width: 120px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid;
+    border-color: gray;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 20px;
+    cursor: pointer;
+}
+
+/* CSS Form */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+
