@@ -12,7 +12,7 @@ Meteor.startup(() => {
     remove: function (userId, doc) {
       console.log('DELETE USER');
       return true; 
-  }
+    }
 });
   // code to run on server at startup
 
