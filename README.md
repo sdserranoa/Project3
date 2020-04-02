@@ -18,7 +18,7 @@ No utilizamos Express para el back porque desde Meteor se puede administrar con 
 
 
 URL de un video en el que se demuestre la funcionalidad la aplicación:
--
+https://youtu.be/BPIbooaB3vk
 
 URL:
--
+https://carrota.herokuapp.com/
